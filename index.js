@@ -1,11 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const User = require('./schema'); 
 
 const app = express();
 const port = process.env.PORT || 3000;
 const mongodbUri = process.env.MONGODB_URI;
 
+app.use(cors({
+    origin: 'chrome-extension://hplpkihcmiaganmpgpclmfmpcjjiclli'
+}));
 app.use(express.json());
 
 // Conectar a MongoDB Atlas
