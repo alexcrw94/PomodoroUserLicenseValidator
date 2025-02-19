@@ -4,11 +4,12 @@ const User = require('./schema');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const mongodbUri = process.env.MONGODB_URI;
 
 app.use(express.json());
 
 // Conectar a MongoDB Atlas
-mongoose.connect("mongodb+srv://alejandrogh94:Alexgh94_@cluster0.r814j.mongodb.net/pomodoro-auth", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("🔥 Conectado a MongoDB"))
     .catch(err => console.error("Error al conectar a MongoDB", err));
 
