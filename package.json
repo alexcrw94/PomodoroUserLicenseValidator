@@ -1,0 +1,16 @@
+{
+  "name": "pomodorouserlicensevalidator",
+  "version": "1.0.0",
+  "description": "Tool that validates google user id to check if it has an active license",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.10.1"
+  }
+}
